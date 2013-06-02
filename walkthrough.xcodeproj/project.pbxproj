@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */; };
+		EE615840175AC6A6009CE03F /* ALDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61583F175AC6A6009CE03F /* ALDataSource.m */; };
 		FE1B3F94165D079700DE15B4 /* ALCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */; };
 		FE1B3F96165D462400DE15B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B3F95165D462400DE15B4 /* CoreImage.framework */; };
 		FE3F71A5165B16AD00E6285B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3F71A4165B16AD00E6285B /* UIKit.framework */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "4thword - Sheet1.plist"; path = "../../FinalApp/4thword - Sheet1.plist"; sourceTree = "<group>"; };
+		EE61583E175AC6A6009CE03F /* ALDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDataSource.h; sourceTree = "<group>"; };
+		EE61583F175AC6A6009CE03F /* ALDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDataSource.m; sourceTree = "<group>"; };
 		FE1B3F8D165CFEF400DE15B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE1B3F92165D079700DE15B4 /* ALCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCameraViewController.h; sourceTree = "<group>"; };
 		FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCameraViewController.m; sourceTree = "<group>"; };
@@ -65,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE61583B175AC5D1009CE03F /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */,
+				EE61583E175AC6A6009CE03F /* ALDataSource.h */,
+				EE61583F175AC6A6009CE03F /* ALDataSource.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 		FE3F7195165B16AD00E6285B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 				FE3F71B4165B16AD00E6285B /* ALAppDelegate.m */,
 				FE3F71C1165B16C000E6285B /* MainStoryboard.storyboard */,
 				FEA3187C165BCCD000EA3A34 /* Paging */,
+				EE61583B175AC5D1009CE03F /* DataSource */,
 				FE3F71AB165B16AD00E6285B /* Supporting Files */,
 				FEB0D9E4165D4F89007F0EA5 /* Camera */,
 			);
@@ -201,6 +217,7 @@
 				FE3F71BB165B16AD00E6285B /* Default-568h@2x.png in Resources */,
 				FE3F71C2165B16C000E6285B /* MainStoryboard.storyboard in Resources */,
 				FEA3187A165BBD7C00EA3A34 /* ALPageViewController.xib in Resources */,
+				EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +233,7 @@
 				FEA31879165BBD7C00EA3A34 /* ALPageViewController.m in Sources */,
 				FE1B3F94165D079700DE15B4 /* ALCameraViewController.m in Sources */,
 				FEB0D9E8165D4FA3007F0EA5 /* UIImage+FixOrientation.m in Sources */,
+				EE615840175AC6A6009CE03F /* ALDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
