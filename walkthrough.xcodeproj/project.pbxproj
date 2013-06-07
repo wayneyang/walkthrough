@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1EA51D175F15290030BAC9 /* ALlesson.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1EA51C175F15290030BAC9 /* ALlesson.m */; };
+		EE1EA51F175F15640030BAC9 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1EA51E175F15640030BAC9 /* lock.png */; };
+		EE1EA521175F16770030BAC9 /* lesson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE1EA520175F16770030BAC9 /* lesson.jpg */; };
 		EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */; };
 		EE615840175AC6A6009CE03F /* ALDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61583F175AC6A6009CE03F /* ALDataSource.m */; };
 		EE615847175B8AEF009CE03F /* ALWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE615846175B8AEF009CE03F /* ALWordViewController.m */; };
 		EE615849175B8B19009CE03F /* ALWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE615848175B8B19009CE03F /* ALWordViewController.xib */; };
 		EE61584C175C33AC009CE03F /* ALSingleWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61584B175C33AC009CE03F /* ALSingleWordViewController.m */; };
-		EE615852175C617D009CE03F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE615851175C617D009CE03F /* MainStoryboard.storyboard */; };
+		EE615858175C6564009CE03F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE615857175C6564009CE03F /* MainStoryboard.storyboard */; };
 		FE1B3F94165D079700DE15B4 /* ALCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */; };
 		FE1B3F96165D462400DE15B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B3F95165D462400DE15B4 /* CoreImage.framework */; };
 		FE3F71A5165B16AD00E6285B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3F71A4165B16AD00E6285B /* UIKit.framework */; };
@@ -30,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE1EA51B175F15290030BAC9 /* ALlesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALlesson.h; sourceTree = "<group>"; };
+		EE1EA51C175F15290030BAC9 /* ALlesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALlesson.m; sourceTree = "<group>"; };
+		EE1EA51E175F15640030BAC9 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		EE1EA520175F16770030BAC9 /* lesson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lesson.jpg; sourceTree = "<group>"; };
 		EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "4thword - Sheet1.plist"; path = "../../FinalApp/4thword - Sheet1.plist"; sourceTree = "<group>"; };
 		EE61583E175AC6A6009CE03F /* ALDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDataSource.h; sourceTree = "<group>"; };
 		EE61583F175AC6A6009CE03F /* ALDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDataSource.m; sourceTree = "<group>"; };
@@ -38,7 +45,7 @@
 		EE615848175B8B19009CE03F /* ALWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALWordViewController.xib; sourceTree = "<group>"; };
 		EE61584A175C33AC009CE03F /* ALSingleWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSingleWordViewController.h; sourceTree = "<group>"; };
 		EE61584B175C33AC009CE03F /* ALSingleWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSingleWordViewController.m; sourceTree = "<group>"; };
-		EE615851175C617D009CE03F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EE615857175C6564009CE03F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FE1B3F8D165CFEF400DE15B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE1B3F92165D079700DE15B4 /* ALCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCameraViewController.h; sourceTree = "<group>"; };
 		FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCameraViewController.m; sourceTree = "<group>"; };
@@ -78,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1EA51A175F15070030BAC9 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				EE1EA520175F16770030BAC9 /* lesson.jpg */,
+				EE1EA51E175F15640030BAC9 /* lock.png */,
+				EE1EA51B175F15290030BAC9 /* ALlesson.h */,
+				EE1EA51C175F15290030BAC9 /* ALlesson.m */,
+			);
+			name = Lesson;
+			sourceTree = "<group>";
+		};
 		EE61583B175AC5D1009CE03F /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +150,8 @@
 		FE3F71AA165B16AD00E6285B /* walkthrough */ = {
 			isa = PBXGroup;
 			children = (
-				EE615851175C617D009CE03F /* MainStoryboard.storyboard */,
+				EE1EA51A175F15070030BAC9 /* Lesson */,
+				EE615857175C6564009CE03F /* MainStoryboard.storyboard */,
 				EE615841175B89F5009CE03F /* Vocabulary */,
 				FE3F71B3165B16AD00E6285B /* ALAppDelegate.h */,
 				FE3F71B4165B16AD00E6285B /* ALAppDelegate.m */,
@@ -239,7 +258,9 @@
 				FEA3187A165BBD7C00EA3A34 /* ALPageViewController.xib in Resources */,
 				EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */,
 				EE615849175B8B19009CE03F /* ALWordViewController.xib in Resources */,
-				EE615852175C617D009CE03F /* MainStoryboard.storyboard in Resources */,
+				EE615858175C6564009CE03F /* MainStoryboard.storyboard in Resources */,
+				EE1EA51F175F15640030BAC9 /* lock.png in Resources */,
+				EE1EA521175F16770030BAC9 /* lesson.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +279,7 @@
 				EE615840175AC6A6009CE03F /* ALDataSource.m in Sources */,
 				EE615847175B8AEF009CE03F /* ALWordViewController.m in Sources */,
 				EE61584C175C33AC009CE03F /* ALSingleWordViewController.m in Sources */,
+				EE1EA51D175F15290030BAC9 /* ALlesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

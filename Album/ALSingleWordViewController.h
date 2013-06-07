@@ -11,9 +11,13 @@
 @interface ALSingleWordViewController : UIViewController
 {
     int pageNumber;
-
+    NSArray *words;
 }
 @property (strong, nonatomic) IBOutlet UILabel *pageNumberLabel;
+@property (strong, nonatomic) IBOutlet UILabel *JapVoc;
+@property (strong, nonatomic) IBOutlet UILabel *ChineseCharacter;
+@property (strong, nonatomic) IBOutlet UILabel *WordType;
+@property (strong, nonatomic) IBOutlet UILabel *ChineseExplain;
 
 - (id)initWithPageNumber:(int)page;
 

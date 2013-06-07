@@ -5,6 +5,7 @@
 //  Created by wayneyang on 13/6/3.
 //  Copyright (c) 2013年 NTU CSIE MHCI Lab. All rights reserved.
 //
+#import "ALDataSource.h"
 
 #import "ALSingleWordViewController.h"
 static NSArray *__pageControlColorList = nil;
@@ -38,8 +39,18 @@ static NSArray *__pageControlColorList = nil;
 
 // Set the label and background color when the view has finished loading.
 - (void)viewDidLoad {
-    //self.pageNumberLabel.text=@"abc";
+    NSArray *topics= [[ALDataSource sharedDataSource] arrayWithTopics];
+    words = [[ALDataSource sharedDataSource] arrayWithWordsInTopics:@"人體"];
+    //NSLog(@"yyoyoyo%@", [wordList[1] class]);
+    //NSDictionary *word =wordList[pageNumber];
+    
+    //NSLog(@"%@",word[ALDataSourceDictKeyType] );
+    self.WordType.text = words[pageNumber][ALDataSourceDictKeyType];
+    self.ChineseCharacter.text = words[pageNumber][ALDataSourceDictKeyChineseCharacter];
+    self.ChineseExplain.text = words[pageNumber][ALDataSourceDictKeyChineseExplain];
+    self.JapVoc.text=words[pageNumber][ALDataSourceDictKeyKana];
     self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
+    
     self.view.backgroundColor = [ALSingleWordViewController pageControlColorWithIndex:pageNumber];
 
     }

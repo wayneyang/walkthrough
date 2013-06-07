@@ -5,9 +5,10 @@
 //  Created by wayneyang on 13/6/2.
 //  Copyright (c) 2013年 NTU CSIE MHCI Lab. All rights reserved.
 //
-#import "ALSingleWordViewController.h"
+//#import "ALSingleWordViewController.h"
 #import "ALWordViewController.h"
-static NSUInteger kNumberOfPages = 8;
+#import "ALlesson.h"
+static NSUInteger kNumberOfPages = 13;
 
 @interface ALWordViewController ()
 
@@ -15,7 +16,6 @@ static NSUInteger kNumberOfPages = 8;
 @implementation ALWordViewController
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	kNumberOfPages=6;
 	// view controllers are created lazily
     // in the meantime, load the array with placeholders which will be replaced on demand
     NSMutableArray *controllers = [[NSMutableArray alloc] init];
@@ -38,22 +38,24 @@ static NSUInteger kNumberOfPages = 8;
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling
     [self loadScrollViewWithPage:0];
-    //[self loadScrollViewWithPage:1];
+    [self loadScrollViewWithPage:1];
 }
 
 - (void)loadScrollViewWithPage:(int)page {
+    
     if (page < 0) return;
     if (page >= kNumberOfPages) return;
 	
     // replace the placeholder if necessary
-    ALSingleWordViewController *controller = [viewControllers objectAtIndex:page];
-    
+    //ALSingleWordViewController *controller = [viewControllers objectAtIndex:page];
+    ALlesson *controller= [viewControllers objectAtIndex:page];
     
     
     if ((NSNull *)controller == [NSNull null]) {
-        
-        controller = [[ALSingleWordViewController alloc] initWithPageNumber:page];
+        controller = [[ALlesson alloc] initWithPageNumber:page];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
+        //controller = [[ALSingleWordViewController alloc] initWithPageNumber:page];
+        //[viewControllers replaceObjectAtIndex:page withObject:controller];
     }
 	
     // add the controller's view to the scroll view
@@ -65,15 +67,15 @@ static NSUInteger kNumberOfPages = 8;
         [self.scrollView addSubview:controller.view];
     }
 }
-
+/*
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     // We don't want a "feedback loop" between the UIPageControl and the scroll delegate in
     // which a scroll event generated from the user hitting the page control triggers updates from
     // the delegate method. We use a boolean to disable the delegate logic when the page control is used.
-    /*if (_pageControl) {
+    //if (_pageControl) {
         // do nothing - the scroll was initiated from the page control, not the user dragging
-        return;
-    }*/
+      //  return;
+   // }
 	
     // Switch the indicator when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.scrollView.frame.size.width;
@@ -87,7 +89,7 @@ static NSUInteger kNumberOfPages = 8;
 	
     // A possible optimization would be to unload the views+controllers which are no longer visible
 }
-/*
+
 // At the begin of scroll dragging, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     self.pageControlUsed = NO;
@@ -96,7 +98,7 @@ static NSUInteger kNumberOfPages = 8;
 // At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     pageControlUsed = NO;
-}*/
+}
 
 - (IBAction)changePage:(id)sender {
     int page = self.pageControl.currentPage;
@@ -121,7 +123,7 @@ static NSUInteger kNumberOfPages = 8;
 
 
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     

@@ -1,30 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="O5D-iQ-yPw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="unV-K1-2Ib">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Word View Controller-->
-        <scene sceneID="0p5-Qc-oS0">
+        <!--Navigation Controller-->
+        <scene sceneID="UmP-c0-mUS">
             <objects>
-                <viewController id="O5D-iQ-yPw" customClass="ALWordViewController" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yMx-gJ-E0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="unV-K1-2Ib" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y1M-ir-D8I">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hpe-Tr-RZH" kind="relationship" relationship="rootViewController" id="MpS-7h-7ez"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqS-gW-TTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="781"/>
+            <point key="canvasLocation" x="1383" y="742"/>
+        </scene>
+        <!--Word View Controller-->
+        <scene sceneID="8F2-N3-nQP">
+            <objects>
+                <viewController id="hpe-Tr-RZH" customClass="ALWordViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1j6-35-6OS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E40-41-qyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="742"/>
         </scene>
         <!--Single Word View Controller-->
-        <scene sceneID="syO-Ed-Do8">
+        <scene sceneID="tca-PY-yxd">
             <objects>
-                <viewController restorationIdentifier="DetailViewController" storyboardIdentifier="DetailViewController" id="CqE-D7-4HM" customClass="ALSingleWordViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="djw-ct-jSz">
+                <viewController storyboardIdentifier="DetailViewController" id="52c-k6-jLN" customClass="ALSingleWordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XpQ-Qk-XRM">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S48-Jy-W5c">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZD-cK-UJ7">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="UUp-ag-BIe"/>
-                                    <constraint firstAttribute="height" constant="159" id="cqr-ob-0f7"/>
+                                    <constraint firstAttribute="width" constant="77" id="8GB-PZ-5mm"/>
+                                    <constraint firstAttribute="height" constant="31" id="qsd-od-p99"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="日文單字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtt-RE-1U0">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="詞性" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjH-l6-WYF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="漢字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV8-hp-Uda">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="中文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1p-AM-vG3">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,32 +69,90 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S48-Jy-W5c" firstAttribute="leading" secondItem="djw-ct-jSz" secondAttribute="leading" constant="68" id="01v-qW-cRL"/>
-                            <constraint firstItem="S48-Jy-W5c" firstAttribute="top" secondItem="djw-ct-jSz" secondAttribute="top" constant="121" id="1FE-FO-f73"/>
+                            <constraint firstAttribute="bottom" secondItem="D1p-AM-vG3" secondAttribute="bottom" constant="242" id="57Z-N8-eWk"/>
+                            <constraint firstItem="VjH-l6-WYF" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="210" id="9r5-f6-Dqd"/>
+                            <constraint firstItem="D1p-AM-vG3" firstAttribute="leading" secondItem="VjH-l6-WYF" secondAttribute="leading" type="default" id="Da4-nE-h0d"/>
+                            <constraint firstItem="PZD-cK-UJ7" firstAttribute="centerX" secondItem="XpQ-Qk-XRM" secondAttribute="centerX" type="default" id="T1g-pC-vZ4"/>
+                            <constraint firstItem="Gtt-RE-1U0" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="65" id="Vb9-mc-zHy"/>
+                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="Gtt-RE-1U0" secondAttribute="leading" type="default" id="ZHe-lx-sKN"/>
+                            <constraint firstItem="cV8-hp-Uda" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="142" id="fLF-35-bdJ"/>
+                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="VjH-l6-WYF" secondAttribute="leading" type="default" id="r57-dL-RMD"/>
+                            <constraint firstAttribute="bottom" secondItem="PZD-cK-UJ7" secondAttribute="bottom" constant="14" id="rvn-cs-im3"/>
+                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="XpQ-Qk-XRM" secondAttribute="leading" constant="30" id="zJ1-aE-RBw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KnJ-a1-deT"/>
+                    <connections>
+                        <outlet property="ChineseCharacter" destination="cV8-hp-Uda" id="zwi-Ge-T07"/>
+                        <outlet property="ChineseExplain" destination="D1p-AM-vG3" id="mkU-zg-hRa"/>
+                        <outlet property="JapVoc" destination="Gtt-RE-1U0" id="5m1-xE-vJl"/>
+                        <outlet property="WordType" destination="VjH-l6-WYF" id="UBb-Mf-8E4"/>
+                        <outlet property="pageNumberLabel" destination="PZD-cK-UJ7" id="RWf-ra-ix4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbr-Yf-vBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208" y="725"/>
+        </scene>
+        <!--Llesson-->
+        <scene sceneID="ScQ-7e-IC5">
+            <objects>
+                <viewController id="5xq-z2-88q" customClass="ALlesson" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cBA-WZ-nDd">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opp-ug-ZMT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="efl-j5-2xp"/>
+                                    <constraint firstAttribute="height" constant="240" id="sJN-4Z-F5O"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lesson One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cC-Lp-RLf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8cC-Lp-RLf" firstAttribute="leading" secondItem="cBA-WZ-nDd" secondAttribute="leading" constant="105" id="226-ea-8wc"/>
+                            <constraint firstItem="opp-ug-ZMT" firstAttribute="centerY" secondItem="cBA-WZ-nDd" secondAttribute="centerY" type="default" id="3cB-Z3-ozK"/>
+                            <constraint firstItem="opp-ug-ZMT" firstAttribute="centerX" secondItem="cBA-WZ-nDd" secondAttribute="centerX" type="default" id="Nfl-6y-maW"/>
+                            <constraint firstItem="8cC-Lp-RLf" firstAttribute="top" secondItem="cBA-WZ-nDd" secondAttribute="top" constant="238" id="nNh-tS-VfY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pageNumberLabel" destination="S48-Jy-W5c" id="AKh-FC-WSe"/>
+                        <outlet property="Image" destination="opp-ug-ZMT" id="XBb-It-AAw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sVh-zm-gLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcY-Vc-neF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="803"/>
+            <point key="canvasLocation" x="2660" y="734"/>
         </scene>
     </scenes>
     <classes>
         <class className="ALSingleWordViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ALSingleWordViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="ChineseCharacter" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ChineseExplain" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="JapVoc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WordType" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pageNumberLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="ALWordViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ALWordViewController.h"/>
             <relationships>
-                <relationship kind="action" name="changePage:"/>
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="ALlesson" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALlesson.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Image" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
