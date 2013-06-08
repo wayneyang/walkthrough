@@ -12,8 +12,9 @@
 {
     NSMutableArray *viewControllers;
 
-
 }
+@property (nonatomic, strong) NSString *topic;
+
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @end

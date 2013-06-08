@@ -13,9 +13,11 @@
 		EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE61583C175AC60E009CE03F /* 4thword - Sheet1.plist */; };
 		EE615840175AC6A6009CE03F /* ALDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61583F175AC6A6009CE03F /* ALDataSource.m */; };
 		EE615847175B8AEF009CE03F /* ALWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE615846175B8AEF009CE03F /* ALWordViewController.m */; };
-		EE615849175B8B19009CE03F /* ALWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE615848175B8B19009CE03F /* ALWordViewController.xib */; };
 		EE61584C175C33AC009CE03F /* ALSingleWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61584B175C33AC009CE03F /* ALSingleWordViewController.m */; };
 		EE615858175C6564009CE03F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE615857175C6564009CE03F /* MainStoryboard.storyboard */; };
+		EE67FB2C1762FCFE00321388 /* ALCollectionViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE67FB2B1762FCFE00321388 /* ALCollectionViewControllerCell.m */; };
+		EE67FB3017635A0900321388 /* ALChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE67FB2F17635A0900321388 /* ALChoiceViewController.m */; };
+		EEB777391762EC3D00A26D44 /* ALCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB777381762EC3C00A26D44 /* ALCollectionViewController.m */; };
 		FE1B3F94165D079700DE15B4 /* ALCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */; };
 		FE1B3F96165D462400DE15B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B3F95165D462400DE15B4 /* CoreImage.framework */; };
 		FE3F71A5165B16AD00E6285B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3F71A4165B16AD00E6285B /* UIKit.framework */; };
@@ -42,10 +44,15 @@
 		EE61583F175AC6A6009CE03F /* ALDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDataSource.m; sourceTree = "<group>"; };
 		EE615845175B8AEF009CE03F /* ALWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALWordViewController.h; sourceTree = "<group>"; };
 		EE615846175B8AEF009CE03F /* ALWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALWordViewController.m; sourceTree = "<group>"; };
-		EE615848175B8B19009CE03F /* ALWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALWordViewController.xib; sourceTree = "<group>"; };
 		EE61584A175C33AC009CE03F /* ALSingleWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSingleWordViewController.h; sourceTree = "<group>"; };
 		EE61584B175C33AC009CE03F /* ALSingleWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSingleWordViewController.m; sourceTree = "<group>"; };
 		EE615857175C6564009CE03F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EE67FB2A1762FCFD00321388 /* ALCollectionViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCollectionViewControllerCell.h; sourceTree = "<group>"; };
+		EE67FB2B1762FCFE00321388 /* ALCollectionViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCollectionViewControllerCell.m; sourceTree = "<group>"; };
+		EE67FB2E17635A0900321388 /* ALChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALChoiceViewController.h; sourceTree = "<group>"; };
+		EE67FB2F17635A0900321388 /* ALChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALChoiceViewController.m; sourceTree = "<group>"; };
+		EEB777371762EC3C00A26D44 /* ALCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCollectionViewController.h; sourceTree = "<group>"; };
+		EEB777381762EC3C00A26D44 /* ALCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCollectionViewController.m; sourceTree = "<group>"; };
 		FE1B3F8D165CFEF400DE15B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE1B3F92165D079700DE15B4 /* ALCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCameraViewController.h; sourceTree = "<group>"; };
 		FE1B3F93165D079700DE15B4 /* ALCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCameraViewController.m; sourceTree = "<group>"; };
@@ -92,6 +99,10 @@
 				EE1EA51E175F15640030BAC9 /* lock.png */,
 				EE1EA51B175F15290030BAC9 /* ALlesson.h */,
 				EE1EA51C175F15290030BAC9 /* ALlesson.m */,
+				EEB777371762EC3C00A26D44 /* ALCollectionViewController.h */,
+				EEB777381762EC3C00A26D44 /* ALCollectionViewController.m */,
+				EE67FB2A1762FCFD00321388 /* ALCollectionViewControllerCell.h */,
+				EE67FB2B1762FCFE00321388 /* ALCollectionViewControllerCell.m */,
 			);
 			name = Lesson;
 			sourceTree = "<group>";
@@ -111,11 +122,19 @@
 			children = (
 				EE615845175B8AEF009CE03F /* ALWordViewController.h */,
 				EE615846175B8AEF009CE03F /* ALWordViewController.m */,
-				EE615848175B8B19009CE03F /* ALWordViewController.xib */,
 				EE61584A175C33AC009CE03F /* ALSingleWordViewController.h */,
 				EE61584B175C33AC009CE03F /* ALSingleWordViewController.m */,
 			);
 			name = Vocabulary;
+			sourceTree = "<group>";
+		};
+		EE67FB2D176359EB00321388 /* Choice */ = {
+			isa = PBXGroup;
+			children = (
+				EE67FB2E17635A0900321388 /* ALChoiceViewController.h */,
+				EE67FB2F17635A0900321388 /* ALChoiceViewController.m */,
+			);
+			name = Choice;
 			sourceTree = "<group>";
 		};
 		FE3F7195165B16AD00E6285B = {
@@ -150,6 +169,7 @@
 		FE3F71AA165B16AD00E6285B /* walkthrough */ = {
 			isa = PBXGroup;
 			children = (
+				EE67FB2D176359EB00321388 /* Choice */,
 				EE1EA51A175F15070030BAC9 /* Lesson */,
 				EE615857175C6564009CE03F /* MainStoryboard.storyboard */,
 				EE615841175B89F5009CE03F /* Vocabulary */,
@@ -257,7 +277,6 @@
 				FE3F71BB165B16AD00E6285B /* Default-568h@2x.png in Resources */,
 				FEA3187A165BBD7C00EA3A34 /* ALPageViewController.xib in Resources */,
 				EE61583D175AC60E009CE03F /* 4thword - Sheet1.plist in Resources */,
-				EE615849175B8B19009CE03F /* ALWordViewController.xib in Resources */,
 				EE615858175C6564009CE03F /* MainStoryboard.storyboard in Resources */,
 				EE1EA51F175F15640030BAC9 /* lock.png in Resources */,
 				EE1EA521175F16770030BAC9 /* lesson.jpg in Resources */,
@@ -280,6 +299,9 @@
 				EE615847175B8AEF009CE03F /* ALWordViewController.m in Sources */,
 				EE61584C175C33AC009CE03F /* ALSingleWordViewController.m in Sources */,
 				EE1EA51D175F15290030BAC9 /* ALlesson.m in Sources */,
+				EEB777391762EC3D00A26D44 /* ALCollectionViewController.m in Sources */,
+				EE67FB2C1762FCFE00321388 /* ALCollectionViewControllerCell.m in Sources */,
+				EE67FB3017635A0900321388 /* ALChoiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

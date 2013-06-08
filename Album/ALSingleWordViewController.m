@@ -23,14 +23,15 @@ static NSArray *__pageControlColorList = nil;
 }
 
 // Load the view nib and initialize the pageNumber ivar.
-- (id)initWithPageNumber:(int)page {
+- (id)initWithPageNumber:(int)page :( NSString*)topic{
    // if (self = [super initWithNibName:@"MyViewController" bundle:nil]) {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
                                                              bundle:[NSBundle mainBundle]];
     ALSingleWordViewController *myViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
     self = myViewController;
     pageNumber = page;
-    
+    self.topic = topic;
+
     //}
     return self;
 }
@@ -39,8 +40,26 @@ static NSArray *__pageControlColorList = nil;
 
 // Set the label and background color when the view has finished loading.
 - (void)viewDidLoad {
-    NSArray *topics= [[ALDataSource sharedDataSource] arrayWithTopics];
-    words = [[ALDataSource sharedDataSource] arrayWithWordsInTopics:@"人體"];
+    //NSArray *topics= [[ALDataSource sharedDataSource] arrayWithTopics];
+    words = [[ALDataSource sharedDataSource] arrayWithWordsInTopics:self.topic];
+    //NSLog(@"yyoyoyo%@", [wordList[1] class]);
+    //NSDictionary *word =wordList[pageNumber];
+    //NSLog(@"%@",word[ALDataSourceDictKeyType] );
+    self.WordType.text = words[pageNumber][ALDataSourceDictKeyType];
+    self.ChineseCharacter.text = words[pageNumber][ALDataSourceDictKeyChineseCharacter];
+    self.ChineseExplain.text = words[pageNumber][ALDataSourceDictKeyChineseExplain];
+    self.JapVoc.text=words[pageNumber][ALDataSourceDictKeyKana];
+    self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
+    if (pageNumber== 0) {
+        NSLog(@"0");
+
+    }
+    self.view.backgroundColor = [ALSingleWordViewController pageControlColorWithIndex:pageNumber];
+    }
+/*- (void)viewWillAppear:(BOOL)animated {
+   [super viewWillAppear:animated];
+    // NSArray *topics= [[ALDataSource sharedDataSource] arrayWithTopics];
+    words = [[ALDataSource sharedDataSource] arrayWithWordsInTopics:self.topic];
     //NSLog(@"yyoyoyo%@", [wordList[1] class]);
     //NSDictionary *word =wordList[pageNumber];
     
@@ -52,8 +71,8 @@ static NSArray *__pageControlColorList = nil;
     self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
     
     self.view.backgroundColor = [ALSingleWordViewController pageControlColorWithIndex:pageNumber];
-
-    }
+ 
+}*/
 
 
 @end

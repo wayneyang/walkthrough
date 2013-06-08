@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="unV-K1-2Ib">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="UFz-fE-pRu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="gfN-y4-8B1">
+            <objects>
+                <viewController id="dgG-QZ-tkt" customClass="ALPageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nM6-PF-HZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="1119"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="UmP-c0-mUS">
             <objects>
@@ -12,22 +20,160 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hpe-Tr-RZH" kind="relationship" relationship="rootViewController" id="MpS-7h-7ez"/>
+                        <segue destination="IE1-7c-SnE" kind="relationship" relationship="rootViewController" id="iMq-fe-GEU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FqS-gW-TTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="742"/>
+            <point key="canvasLocation" x="1827" y="2382"/>
+        </scene>
+        <!--Llesson-->
+        <scene sceneID="avD-SH-PIH">
+            <objects>
+                <viewController id="tcb-MS-Tws" customClass="ALlesson" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I9t-uB-uiX">
+                        <rect key="frame" x="0.0" y="20" width="960" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="ev3-0t-4xd">
+                                <rect key="frame" x="118" y="512" width="84" height="36"/>
+                                <color key="pageIndicatorTintColor" red="0.4003056908" green="0.90185702140000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.09510913402" green="0.174841315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="Fwm-fQ-WeV">
+                                <rect key="frame" x="0.0" y="3" width="1600" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Whp-Qp-4IK">
+                                        <rect key="frame" x="39" y="208" width="222" height="202"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lesson One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JTw-AK-OTQ">
+                                                <rect key="frame" x="55" y="91" width="112" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="P5D-SQ-P66">
+                                                <rect key="frame" x="31" y="7" width="160" height="187"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="tcb-MS-Tws" id="cx7-QG-Jzw"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="Image" destination="P5D-SQ-P66" id="GrZ-xF-fbN"/>
+                        <outlet property="LessonLabel" destination="JTw-AK-OTQ" id="fh9-t8-bFP"/>
+                        <outlet property="pageControl" destination="ev3-0t-4xd" id="4c8-jx-hkf"/>
+                        <outlet property="scrollView" destination="Fwm-fQ-WeV" id="IVF-4g-snj"/>
+                        <outlet property="view" destination="I9t-uB-uiX" id="ZpN-rW-sdk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKy-Dk-Yzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="475"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="sQr-sN-Lds">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="UFz-fE-pRu" customClass="ALCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="IGR-e5-gqp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdq-FK-YET">
+                            <size key="itemSize" width="136" height="101"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lesson" id="q7b-Ud-bxa" customClass="ALCollectionViewControllerCell">
+                                <rect key="frame" x="0.0" y="50" width="136" height="101"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="136" height="101"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="CSY-6u-FOe">
+                                            <rect key="frame" x="0.0" y="0.0" width="81" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="第一日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OFL-cd-ZYB" colorLabel="IBBuiltInLabel-Gray">
+                                            <rect key="frame" x="51" y="44" width="65" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="主題:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqA-cu-Np5" colorLabel="IBBuiltInLabel-Gray">
+                                            <rect key="frame" x="8" y="44" width="65" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="LessonName" destination="OFL-cd-ZYB" id="fT7-Sm-MKG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumHeader" id="czD-yl-z6F">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1001" contentMode="left" text="日檢學習課程" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wD5-Yj-GfE">
+                                    <rect key="frame" x="20" y="0.0" width="280" height="50"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="UFz-fE-pRu" id="vCp-aF-ces"/>
+                            <outlet property="delegate" destination="UFz-fE-pRu" id="FpX-K0-MdZ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="XrO-4a-S1K"/>
+                    <connections>
+                        <segue destination="unV-K1-2Ib" kind="modal" identifier="showWord" id="tNw-md-w7z"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qy-UI-vuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="2413"/>
+        </scene>
+        <!--Llesson-->
+        <scene sceneID="9dm-rw-Odf">
+            <objects>
+                <viewController id="H3a-QW-uqG" customClass="ALlesson" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzB-n0-cVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="1424"/>
         </scene>
         <!--Word View Controller-->
         <scene sceneID="8F2-N3-nQP">
             <objects>
-                <viewController id="hpe-Tr-RZH" customClass="ALWordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wordView" id="hpe-Tr-RZH" customClass="ALWordViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1j6-35-6OS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E40-41-qyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="742"/>
+            <point key="canvasLocation" x="2299" y="1375"/>
         </scene>
         <!--Single Word View Controller-->
         <scene sceneID="tca-PY-yxd">
@@ -37,49 +183,38 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZD-cK-UJ7">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="8GB-PZ-5mm"/>
-                                    <constraint firstAttribute="height" constant="31" id="qsd-od-p99"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PZD-cK-UJ7">
+                                <rect key="frame" x="122" y="503" width="77" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="日文單字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtt-RE-1U0">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="日文單字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gtt-RE-1U0">
+                                <rect key="frame" x="30" y="65" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="詞性" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjH-l6-WYF">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="詞性" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VjH-l6-WYF">
+                                <rect key="frame" x="30" y="210" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="漢字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV8-hp-Uda">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="漢字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cV8-hp-Uda">
+                                <rect key="frame" x="30" y="142" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="中文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1p-AM-vG3">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="中文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D1p-AM-vG3">
+                                <rect key="frame" x="30" y="285" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="D1p-AM-vG3" secondAttribute="bottom" constant="242" id="57Z-N8-eWk"/>
-                            <constraint firstItem="VjH-l6-WYF" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="210" id="9r5-f6-Dqd"/>
-                            <constraint firstItem="D1p-AM-vG3" firstAttribute="leading" secondItem="VjH-l6-WYF" secondAttribute="leading" type="default" id="Da4-nE-h0d"/>
-                            <constraint firstItem="PZD-cK-UJ7" firstAttribute="centerX" secondItem="XpQ-Qk-XRM" secondAttribute="centerX" type="default" id="T1g-pC-vZ4"/>
-                            <constraint firstItem="Gtt-RE-1U0" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="65" id="Vb9-mc-zHy"/>
-                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="Gtt-RE-1U0" secondAttribute="leading" type="default" id="ZHe-lx-sKN"/>
-                            <constraint firstItem="cV8-hp-Uda" firstAttribute="top" secondItem="XpQ-Qk-XRM" secondAttribute="top" constant="142" id="fLF-35-bdJ"/>
-                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="VjH-l6-WYF" secondAttribute="leading" type="default" id="r57-dL-RMD"/>
-                            <constraint firstAttribute="bottom" secondItem="PZD-cK-UJ7" secondAttribute="bottom" constant="14" id="rvn-cs-im3"/>
-                            <constraint firstItem="cV8-hp-Uda" firstAttribute="leading" secondItem="XpQ-Qk-XRM" secondAttribute="leading" constant="30" id="zJ1-aE-RBw"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KnJ-a1-deT"/>
                     <connections>
@@ -92,46 +227,126 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbr-Yf-vBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2208" y="725"/>
+            <point key="canvasLocation" x="2752" y="1413"/>
         </scene>
         <!--Llesson-->
         <scene sceneID="ScQ-7e-IC5">
             <objects>
-                <viewController id="5xq-z2-88q" customClass="ALlesson" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LessonView" id="5xq-z2-88q" customClass="ALlesson" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cBA-WZ-nDd">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opp-ug-ZMT">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="213" id="efl-j5-2xp"/>
-                                    <constraint firstAttribute="height" constant="240" id="sJN-4Z-F5O"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lesson One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cC-Lp-RLf">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" id="79d-FZ-rEH">
+                                <rect key="frame" x="71" y="175" width="222" height="202"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="opp-ug-ZMT">
+                                        <rect key="frame" x="0.0" y="2" width="213" height="240"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lesson One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tiS-HJ-F6S">
+                                        <rect key="frame" x="47" y="112" width="112" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xnH-Xd-30Y" appends="YES" id="q6s-Uk-I2c"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8cC-Lp-RLf" firstAttribute="leading" secondItem="cBA-WZ-nDd" secondAttribute="leading" constant="105" id="226-ea-8wc"/>
-                            <constraint firstItem="opp-ug-ZMT" firstAttribute="centerY" secondItem="cBA-WZ-nDd" secondAttribute="centerY" type="default" id="3cB-Z3-ozK"/>
-                            <constraint firstItem="opp-ug-ZMT" firstAttribute="centerX" secondItem="cBA-WZ-nDd" secondAttribute="centerX" type="default" id="Nfl-6y-maW"/>
-                            <constraint firstItem="8cC-Lp-RLf" firstAttribute="top" secondItem="cBA-WZ-nDd" secondAttribute="top" constant="238" id="nNh-tS-VfY"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="Image" destination="opp-ug-ZMT" id="XBb-It-AAw"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="vgf-R6-Tax"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcY-Vc-neF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xnH-Xd-30Y">
+                    <connections>
+                        <action selector="TapPresssed:" destination="5xq-z2-88q" id="8kG-eD-Wce"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2660" y="734"/>
+            <point key="canvasLocation" x="2142" y="757"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="6Pd-ye-r1w">
+            <objects>
+                <viewController id="IE1-7c-SnE" customClass="ALChoiceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RfN-Im-0sU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8MY-Zh-Ayn">
+                                <rect key="frame" x="118" y="271" width="85" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="今日文法">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vmb-b4-wN0">
+                                <rect key="frame" x="118" y="157" width="85" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="今日單字">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VacLesson:" destination="IE1-7c-SnE" eventType="touchUpInside" id="nia-Yc-uEN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2JL-ZY-bli">
+                        <barButtonItem key="leftBarButtonItem" title="完成" id="FKL-jS-twy">
+                            <connections>
+                                <action selector="done:" destination="IE1-7c-SnE" id="TVo-0W-tSX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7M-h5-Mpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2274" y="2073"/>
         </scene>
     </scenes>
     <classes>
+        <class className="ALChoiceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALChoiceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="VacLesson:"/>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="ALCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALCollectionViewController.h"/>
+        </class>
+        <class className="ALCollectionViewControllerCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALCollectionViewControllerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="LessonName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ALPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALPageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
         <class className="ALSingleWordViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ALSingleWordViewController.h"/>
             <relationships>
@@ -152,11 +367,27 @@
         <class className="ALlesson" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ALlesson.h"/>
             <relationships>
+                <relationship kind="action" name="TapPresssed:"/>
                 <relationship kind="outlet" name="Image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="LessonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

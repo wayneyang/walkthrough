@@ -18,8 +18,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *ChineseCharacter;
 @property (strong, nonatomic) IBOutlet UILabel *WordType;
 @property (strong, nonatomic) IBOutlet UILabel *ChineseExplain;
-
-- (id)initWithPageNumber:(int)page;
+@property (nonatomic, strong) NSString *topic;
+- (id)initWithPageNumber:(int)page :(NSString*)topic;
 
 
 @end

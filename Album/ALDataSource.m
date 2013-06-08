@@ -63,10 +63,18 @@ NSString * const ALDataSourceDictKeyTopic=@"分類";
         // Save countries into a set (remove duplicates result).
         NSMutableSet *wordSet = [NSMutableSet set];
         for (NSDictionary *continent in wordList)
-            [wordSet addObject:continent[ALDataSourceDictKeyTopic]];
+            if (continent!=NULL) {
+                [wordSet addObject:continent[ALDataSourceDictKeyTopic]];
+            }
+                    
         
         // Convert set to array and sort the array.
-        TopicList = [wordSet allObjects];
+        TopicList = [[wordSet allObjects] sortedArrayUsingComparator:
+                      ^NSComparisonResult(id obj1, id obj2) {
+                          return [obj1 compare:obj2];
+                      }];
+        // Convert set to array and sort the array.
+        //TopicList = [wordSet allObjects];
         
         // Save the result into cache
         [cache setObject:TopicList forKey:ALDataSourceDictKeyTopic];

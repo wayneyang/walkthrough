@@ -8,6 +8,8 @@
 //#import "ALSingleWordViewController.h"
 #import "ALWordViewController.h"
 #import "ALlesson.h"
+#import "ALDataSource.h"
+#import "ALSingleWordViewController.h"
 static NSUInteger kNumberOfPages = 13;
 
 @interface ALWordViewController ()
@@ -18,6 +20,8 @@ static NSUInteger kNumberOfPages = 13;
 	[super viewDidLoad];
 	// view controllers are created lazily
     // in the meantime, load the array with placeholders which will be replaced on demand
+    //set kNumberPages as word in topic pages
+    kNumberOfPages =[[[ALDataSource sharedDataSource] arrayWithWordsInTopics:self.topic]count];
     NSMutableArray *controllers = [[NSMutableArray alloc] init];
     for (unsigned i = 0; i < kNumberOfPages; i++) {
         [controllers addObject:[NSNull null]];
@@ -27,7 +31,8 @@ static NSUInteger kNumberOfPages = 13;
 	
     // a page is the width of the scroll view
     self.scrollView.pagingEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * kNumberOfPages, self.scrollView.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * kNumberOfPages, self.scrollView.frame.size.height-self.navigationController.navigationBar.frame.size.height
+);
     self.scrollView.scrollsToTop = NO;
     self.scrollView.delegate = self;
 	
@@ -37,25 +42,25 @@ static NSUInteger kNumberOfPages = 13;
     // pages are created on demand
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling
-    [self loadScrollViewWithPage:0];
-    [self loadScrollViewWithPage:1];
+    [self loadScrollViewWithPage:0:self.topic];
+    //[self loadScrollViewWithPage:1:_topic];
 }
 
-- (void)loadScrollViewWithPage:(int)page {
+- (void)loadScrollViewWithPage:(int)page  :(NSString*)topic {
     
     if (page < 0) return;
     if (page >= kNumberOfPages) return;
-	
+    
     // replace the placeholder if necessary
-    //ALSingleWordViewController *controller = [viewControllers objectAtIndex:page];
-    ALlesson *controller= [viewControllers objectAtIndex:page];
+    ALSingleWordViewController *controller = [viewControllers objectAtIndex:page];
+    //ALlesson *controller= [viewControllers objectAtIndex:page];
     
     
     if ((NSNull *)controller == [NSNull null]) {
-        controller = [[ALlesson alloc] initWithPageNumber:page];
-        [viewControllers replaceObjectAtIndex:page withObject:controller];
-        //controller = [[ALSingleWordViewController alloc] initWithPageNumber:page];
+        //controller = [[ALlesson alloc] initWithPageNumber:page];
         //[viewControllers replaceObjectAtIndex:page withObject:controller];
+        controller = [[ALSingleWordViewController alloc] initWithPageNumber:page:topic];
+        [viewControllers replaceObjectAtIndex:page withObject:controller];
     }
 	
     // add the controller's view to the scroll view
@@ -67,7 +72,7 @@ static NSUInteger kNumberOfPages = 13;
         [self.scrollView addSubview:controller.view];
     }
 }
-/*
+
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     // We don't want a "feedback loop" between the UIPageControl and the scroll delegate in
     // which a scroll event generated from the user hitting the page control triggers updates from
@@ -83,13 +88,13 @@ static NSUInteger kNumberOfPages = 13;
     self.pageControl.currentPage = page;
 	
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    [self loadScrollViewWithPage:page - 1];
-    [self loadScrollViewWithPage:page];
-    [self loadScrollViewWithPage:page + 1];
+    [self loadScrollViewWithPage:page - 1:_topic];
+    [self loadScrollViewWithPage:page:_topic];
+    [self loadScrollViewWithPage:page + 1:_topic];
 	
     // A possible optimization would be to unload the views+controllers which are no longer visible
 }
-
+/*
 // At the begin of scroll dragging, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     self.pageControlUsed = NO;

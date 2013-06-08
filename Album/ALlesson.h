@@ -8,12 +8,16 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface ALlesson : UIViewController
+@interface ALlesson : UIViewController<UIScrollViewDelegate>
 {
     int pageNumber;
     NSArray *words;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *Image;
 - (id)initWithPageNumber:(int)page;
+@property (strong, nonatomic) IBOutlet UILabel *LessonLabel;
+- (IBAction)TapPresssed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
